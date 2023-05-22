@@ -1,0 +1,39 @@
+.right-little{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    cursor: pointer;
+    .right-content{
+        display: flex;
+        flex-direction: row;
+        .right-video-pre{
+            margin-right:8px;
+            border-radius: 8px;
+            img{
+                width: 168px;
+                height: 94px;
+                border-radius: 5px; 
+            }
+        }
+        .right-content-pre{
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .right-little-video-title{
+            margin-bottom: 4px;
+           
+        }
+        .right-content-pre span{
+            font-size: 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow:hidden;
+        }
+        .right-content-pre div{
+            color: rgb(96,96,96);
+        }
+    }
+}

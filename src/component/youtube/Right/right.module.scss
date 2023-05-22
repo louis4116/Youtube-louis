@@ -1,0 +1,93 @@
+@mixin top{
+    display: inline-block;
+    padding: 0 12px;
+    margin: 8px 8px 8px 0;
+    font-size: 14px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.top{
+    max-width: 400px;
+}
+.right-top{
+    display: flex;
+    position: relative; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.right-top-container{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    .test2{
+        display: inline-block;
+        .right-top-content{
+            @include top();
+            background-color: rgba(0,0,0,0.05);
+        }
+        .right-top-content-selected{
+            @include top();
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
+}
+
+
+.right-arrow{
+  background-color: white;
+  cursor: pointer;
+}
+
+.right-little{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    .right-content{
+        display: flex;
+        flex-direction: row;
+        .right-video-pre{
+            margin-right:8px;
+            border-radius: 8px;
+            width: 168px;
+            height: 94px;
+            background-color: black;
+        }
+        .right-content-pre{
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+         
+        }
+        .right-little-video-title{
+            margin-bottom: 4px;
+        }
+        .right-content-pre span{
+            font-size: 1rem;
+        }
+        .right-content-pre div{
+            color: rgb(96,96,96);
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1350px) {
+    .top{
+        max-width: 700px;
+    }
+    .right-top{
+        justify-content:start;
+    }
+    .right-top-container{
+        overflow: visible;
+        white-space: normal;
+    }
+    .right-arrow{
+        display: none;
+    }
+}
