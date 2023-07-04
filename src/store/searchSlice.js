@@ -5,7 +5,7 @@ const searchSlice = createSlice({
   initialState: {
     items: "",
     videoId: "",
-    history: [],
+    history: JSON.parse(localStorage.getItem("history")) || [],
   },
   reducers: {
     searchItems: (state, action) => {
@@ -20,9 +20,17 @@ const searchSlice = createSlice({
     searchHistory: (state, action) => {
       const item = action.payload;
       state.history.push(item);
+      localStorage.setItem(
+        "history",
+        JSON.stringify(state.history.map((item) => item))
+      );
     },
     delSearchHistory: (state, action) => {
       state.history.shift();
+      localStorage.setItem(
+        "history",
+        JSON.stringify(state.history.map((item) => item))
+      );
     },
   },
 });

@@ -73,6 +73,15 @@ const Header = () => {
                     <FiX />
                   </span>
                 )}
+                <div className={classes["header-second-drop"]} ref={dropRef}>
+                  {show &&
+                    searchHistory?.map((item) => {
+                      const uuid = uuidv4();
+                      return (
+                        <HeaderDrop key={uuid} item={item} setShow={setShow} />
+                      );
+                    })}
+                </div>
               </div>
 
               <button>
@@ -81,14 +90,6 @@ const Header = () => {
             </div>
           </div>
         </form>
-
-        <div className={classes["header-second-drop"]} ref={dropRef}>
-          {show &&
-            searchHistory?.map((item) => {
-              const uuid = uuidv4();
-              return <HeaderDrop key={uuid} item={item} setShow={setShow} />;
-            })}
-        </div>
       </div>
       <div className={classes["header-third"]}>
         <div className={classes["header-third-video"]}>

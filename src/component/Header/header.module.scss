@@ -71,8 +71,8 @@
     display: flex;
     flex-direction: column-reverse;
     left: 0;
-    top: 55px;
-    width: 540px;
+    top: 40px;
+    width: 100%;
     background-color: white;
     box-shadow:0px 0px 1px black ;
     border-radius: 10px;
@@ -134,14 +134,16 @@
 @media screen and (max-width:1100px) {
    
     .header-second{
-
         width: 500px;
     }
     .header-second-search-input{
         width: 400px;
     }
+    .header-second-drop{
+       
+        width: 400px;
+    }
     .header-third{
-
         width: 150px;
     }
 }
@@ -149,14 +151,14 @@
     .header-first{
         flex:0;
     }
-    .header-second{
-        flex:1;
-        
-     
-    }
+
     .header-second-search-input{
         width: 300px;
-}
+    }
+    .header-second-drop{
+
+        width: 300px;
+    }
 .header-third{
     flex:0;
     width: auto;

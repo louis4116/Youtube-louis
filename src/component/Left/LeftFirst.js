@@ -17,7 +17,7 @@ const LeftFirst = ({ title, channelTitle }) => {
           <div className={classes["left-des"]}>
             <div style={{ fontWeight: "500" }}>{channelTitle}</div>
             <div style={{ color: "#606060", fontSize: "12px" }}>
-              37.8萬位訂閱者
+              很多位訂閱者
             </div>
           </div>
           <div className={classes["left-sub"]}>

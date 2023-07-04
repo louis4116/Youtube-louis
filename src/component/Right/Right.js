@@ -69,7 +69,9 @@ const Right = () => {
                 key={Math.random()}
                 onClick={() => setCurrentPage(i)}
               >
-                頁數{i}
+                {" "}
+                <span>頁數</span>
+                <span>{i}</span>
               </div>
             ))}
           </div>
