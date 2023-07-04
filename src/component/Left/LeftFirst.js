@@ -14,7 +14,6 @@ const LeftFirst = ({ title, channelTitle }) => {
       <div className={classes["left-title-top"]}>{title}</div>
       <div className={classes["left-little-small"]}>
         <div className={classes["left-little-content"]}>
-          <div className={classes["photo"]}></div>
           <div className={classes["left-des"]}>
             <div style={{ fontWeight: "500" }}>{channelTitle}</div>
             <div style={{ color: "#606060", fontSize: "12px" }}>

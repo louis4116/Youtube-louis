@@ -1,5 +1,4 @@
 import React from "react";
-import { useGetVideoDetailsQuery } from "../../../api/FetchData";
 import classes from "./rightdetail.module.scss";
 const RightDetail = ({ title, channel, imgur, videoId, navVideo }) => {
   const handleClick = () => {

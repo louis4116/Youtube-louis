@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Left from "./Left";
+import Header from "./Header/Header";
+import Left from "./Left/Left";
 import Right from "./Right/Right";
 import classes from "./youtube.module.scss";
 const Youtube = () => {

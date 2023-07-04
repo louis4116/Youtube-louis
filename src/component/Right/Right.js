@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useGetAllDatasQuery } from "../../../api/FetchData";
+import { useGetAllDatasQuery } from "../../api/FetchData";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { videoActions } from "../../../store/videoSlice";
+import { videoActions } from "../../store/videoSlice";
 import RightDetail from "./RightDetail";
 import classes from "./right.module.scss";
 
@@ -18,7 +18,7 @@ const Right = () => {
   const perPage = 7;
   const lastPage = currentPage * perPage;
   const firstPage = lastPage - perPage;
-
+  console.log(searchItems);
   const testScroll = (element, speed, distance, step) => {
     let temp = 0;
     const sliderTimer = setInterval(() => {
@@ -33,7 +33,6 @@ const Right = () => {
   const navVideo = (e) => {
     dispatch(videoActions.actionhVideos(e));
   };
-  useEffect(() => {}, [testScroll]);
 
   useEffect(() => {
     if (data) {

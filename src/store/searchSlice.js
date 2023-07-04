@@ -5,6 +5,7 @@ const searchSlice = createSlice({
   initialState: {
     items: "",
     videoId: "",
+    history: [],
   },
   reducers: {
     searchItems: (state, action) => {
@@ -15,6 +16,13 @@ const searchSlice = createSlice({
       const id = action.payload;
       console.log(id);
       state.videoId = id;
+    },
+    searchHistory: (state, action) => {
+      const item = action.payload;
+      state.history.push(item);
+    },
+    delSearchHistory: (state, action) => {
+      state.history.shift();
     },
   },
 });
